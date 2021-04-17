@@ -71,7 +71,7 @@
   
         
               <div class="container  p-3 my-3">
-  
+                  <form th:action="@{/savelocation}" th:object="${location}" method="POST" >
                   <section>
                     <div class="form-elegant">
                       <!--Header-->
@@ -82,12 +82,12 @@
                       <div class="modal-body mx-4">
                         <!--Body-->
                         <div class="md-form mb-5">
-                          <input type="text" id="Form-location" class="form-control validate">
-                          <label data-error="wrong" data-success="right" for="Form-location">Location</label>
+                          <input type="text" id="location" th:field="*{direccion}"  class="form-control validate">
+                          <label data-error="wrong" data-success="right"   for="location">Location</label>
                         </div>
             
                         <div class="text-center mb-3">
-                          <a type="button" class="btn btn-info btn-md ml-0" >Guardar</a>
+                          <button type="submit" class="btn btn-info btn-md ml-0" >Guardar</button>
                         </div>
                     
                       </div>
@@ -98,7 +98,7 @@
             
                    
                   </section>
-               
+                </form>
     
                 </div>
   

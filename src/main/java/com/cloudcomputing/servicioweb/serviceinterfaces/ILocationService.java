@@ -10,7 +10,7 @@ public interface ILocationService {
 
     public Optional<Location> listar(int id);
 
-    public int save(Location l);
+    public void save(Location l);
     
     public void delete(int id);
 }

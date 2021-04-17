@@ -41,9 +41,9 @@ public class UsuarioService implements IUsuarioService {
     }
 
     @Override
-    public int save(Usuarios u) {
-        // TODO Auto-generated method stub
-        return 0;
+    public void save(Usuarios u) {
+          data.save(u);
+      
     }
 
 

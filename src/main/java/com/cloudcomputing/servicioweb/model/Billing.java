@@ -26,6 +26,7 @@ public class Billing {
             this.debit = debit;
             this.credit = credit;
         }
+        
         public Billing() {
         }
         public int getId() {

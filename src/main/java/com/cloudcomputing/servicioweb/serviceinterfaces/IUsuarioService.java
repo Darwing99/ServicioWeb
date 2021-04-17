@@ -8,7 +8,7 @@ import com.cloudcomputing.servicioweb.model.Usuarios;
 public interface IUsuarioService {
     public List<Usuarios> listar();
     public Optional<Usuarios> listar(int id);
-    public int save(Usuarios u);
+    public  void save(Usuarios u);
     public void delete(int id);
 
     

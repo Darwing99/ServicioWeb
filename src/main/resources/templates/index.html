@@ -18,16 +18,13 @@
     <script th:src="@{/js/bootstrap.bundle.min.js}" src="../static/js/bootstrap.bundle.min.js"></script>
     <script th:src="@{/js/mdb.min.js}" src="../static/js/mdb.min.js"></script>
     <script th:src="@{/js/bootstrap.min.js}" src="../static/js/bootstrap.min.js"></script>
- 
-  
-   
-</head>
+
+  </head>
 <body>
   <header>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
       <div class="container">
 
-    
 
         <!-- Collapse -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -75,11 +72,10 @@
                         <input type="text" id="Form-name"  th:field="*{name}" class="form-control validate">
                         <label data-error="wrong" data-success="right" for="Form-name">name</label>
                       </div>
-                      <div class="md-form pb-3">
-                        <select  th:field="*{location}" class="mdb-select md-form">
-                          <option value="1" disabled selected>SB</option>
-                          <option value="2" disabled selected>SB</option>
-                        </select>
+                      <div class="md-form mb-5">
+                        <input type="text" id="Form-location"  th:field="*{location}" class="form-control validate">
+                        <label data-error="wrong" data-success="right" for="Form-location">Location</label>
+                        
                       </div>
                       <div class="text-center mb-3">
                         <button type="submit" value="guardar" class="btn btn-info btn-md ml-0" >Guardar</button>

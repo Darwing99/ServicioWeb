@@ -37,9 +37,8 @@ public class LocationService implements ILocationService  {
     }
 
     @Override
-    public int save(Location l) {
-        // TODO Auto-generated method stub
-        return 0;
+    public void save(Location l) {
+        data.save(l);
     }
     
 }

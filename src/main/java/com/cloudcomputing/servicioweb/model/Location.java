@@ -15,26 +15,26 @@ public class Location {
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private int id;
-    @Column(name="location",length = 255)
-    private String location;
+    @Column(name="direccion",length = 255)
+    private String direccion;
     public Location() {
-    }
-    public Location(int id, String location) {
-        this.id = id;
-        this.location = location;
-    }
 
+    }
+    public Location(int id, String direccion) {
+        this.id = id;
+        this.direccion = direccion;
+    }
     public int getId() {
         return id;
     }
     public void setId(int id) {
         this.id = id;
     }
-    public String getLocation() {
-        return location;
+    public String getDireccion() {
+        return direccion;
     }
-    public void setLocation(String location) {
-        this.location = location;
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 
     
