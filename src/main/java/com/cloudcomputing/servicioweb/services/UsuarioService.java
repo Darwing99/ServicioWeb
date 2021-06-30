@@ -1,10 +1,7 @@
 package com.cloudcomputing.servicioweb.services;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
-
-import javax.persistence.Entity;
 
 import com.cloudcomputing.servicioweb.interfaces.IUsuarios;
 import com.cloudcomputing.servicioweb.model.Usuarios;

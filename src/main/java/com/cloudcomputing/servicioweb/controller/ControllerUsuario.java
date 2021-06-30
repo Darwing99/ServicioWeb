@@ -1,8 +1,6 @@
 package com.cloudcomputing.servicioweb.controller;
 
-import com.cloudcomputing.servicioweb.model.Location;
 import com.cloudcomputing.servicioweb.model.Usuarios;
-import com.cloudcomputing.servicioweb.serviceinterfaces.ILocationService;
 import com.cloudcomputing.servicioweb.serviceinterfaces.IUsuarioService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,30 +14,19 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 
-@RequestMapping
+@RequestMapping()
 public class ControllerUsuario {
-
+  
     @Autowired
     private IUsuarioService userCRUD;
 
-    @Autowired
-    private ILocationService locationCRUD;
-
-
-    
+ 
     @GetMapping("/")
     public String listar( Model model) {
         model.addAttribute("usuario",new Usuarios());
           return "index";
     }
-    @GetMapping("/billing")
-    public String transactions(Model model){
-        return "billing";
-    }
-    // @GetMapping("/location")
-    // public String location(Model model){
-    //     return "location";
-    // }
+
     @GetMapping("/users")
     public ModelAndView getHome(Model model){
         model.addAttribute("usuario",new Usuarios());
@@ -49,7 +36,6 @@ public class ControllerUsuario {
 
     //Guardar Usuarios
 
-  
     @PostMapping("/saveUser")
     public ModelAndView save(@Valid Usuarios u, Model model){
         userCRUD.save(u);

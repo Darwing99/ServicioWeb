@@ -1,8 +1,6 @@
 package com.cloudcomputing.servicioweb.interfaces;
 
 
-import java.util.ArrayList;
-
 import com.cloudcomputing.servicioweb.model.Usuarios;
 
 import org.springframework.data.repository.CrudRepository;

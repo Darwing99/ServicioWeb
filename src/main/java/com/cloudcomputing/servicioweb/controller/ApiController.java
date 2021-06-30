@@ -18,15 +18,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/user")
 public class ApiController {
+    public static final String Key="2d3r5h8c1e3h2c1"; 
     @Autowired
     UsuarioService usuarioService;
-    @GetMapping("/list")
+    @GetMapping("/key="+Key+"/lista")
     public  ArrayList<Usuarios> listar(){
 
         return usuarioService.listar();
     }
 
-    @PostMapping("/list")
+    @PostMapping("/key="+Key+"/insertlista")
     public Usuarios guardarUsuarios(@RequestBody Usuarios users){
         return this.usuarioService.guardaUsuarios(users);
 
