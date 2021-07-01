@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/user")
-public class ApiController {
+public class ControllerUsers {
     public static final String Key="2d3r5h8c1e3h2c1"; 
     @Autowired
     UsuarioService usuarioService;

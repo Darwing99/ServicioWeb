@@ -19,7 +19,7 @@ public class UsuarioService implements IUsuarioService {
 
     @Override
     public void delete(int id) {
-        // TODO Auto-generated method stub
+       
         
     }
 
@@ -33,7 +33,7 @@ public class UsuarioService implements IUsuarioService {
 
     @Override
     public Optional<Usuarios> listar(int id) {
-        // TODO Auto-generated method stub
+      
         return null;
     }
 
