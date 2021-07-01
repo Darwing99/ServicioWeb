@@ -19,11 +19,8 @@ public class UsuarioService implements IUsuarioService {
 
     @Override
     public void delete(int id) {
-       
         
     }
-
-
     // listar con GET
     @Override
         public ArrayList<Usuarios>listar() {
