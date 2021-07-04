@@ -1,9 +1,11 @@
 package com.cloudcomputing.servicioweb.controller;
 
+
+
 import java.util.ArrayList;
 
-import com.cloudcomputing.servicioweb.model.Carreras;
-import com.cloudcomputing.servicioweb.services.CarreraService;
+import com.cloudcomputing.servicioweb.model.Image;
+import com.cloudcomputing.servicioweb.services.ImageService;
 import com.cloudcomputing.servicioweb.settings.constant;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,21 +16,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/carreras")
-public class ControllerCarreras {
-   
+@RequestMapping("image")
+public class ControllerImage {
     @Autowired
-    CarreraService carreraService;
-   
+    ImageService imageService;
     @GetMapping("/key="+constant.KEY+"/lista")
-    public  ArrayList<Carreras> listar(){
+    public  ArrayList<Image> listar(){
 
-        return carreraService.listar();
+        return imageService.listar();
     }
 
     @PostMapping("/key="+constant.KEY+"/insertlista")
-    public Carreras guardarCarreras(@RequestBody Carreras carreras){
-        return this.carreraService.guardarCarreras(carreras);
+    public Image guardarUsuarios(@RequestBody Image image){
+        return this.imageService.GuardarImage(image);
 
     }
+
 }

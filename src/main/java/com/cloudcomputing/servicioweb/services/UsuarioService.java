@@ -17,10 +17,7 @@ public class UsuarioService implements IUsuarioService {
     private IUsuarios data;
     
 
-    @Override
-    public void delete(int id) {
-        
-    }
+   
     // listar con GET
     @Override
         public ArrayList<Usuarios>listar() {
@@ -53,10 +50,8 @@ public class UsuarioService implements IUsuarioService {
         return data.findById(id);
 
     }
-
-  
     //eliminar si asi se desea
-    public boolean eliminarUsuario(int id){
+    public boolean delete(int id){
         try {
              data.deleteById(id);
              return true;
