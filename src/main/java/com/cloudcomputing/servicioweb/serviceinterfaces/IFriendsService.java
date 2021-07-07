@@ -9,5 +9,5 @@ public interface IFriendsService {
     public List<Friends> listar();
     public Optional<Friends> listar(int id);
     public  void save(Friends u);
-    public void delete(int id);
+    public boolean delete(int id);
 }

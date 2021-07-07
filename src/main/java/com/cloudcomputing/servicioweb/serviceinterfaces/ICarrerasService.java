@@ -9,5 +9,5 @@ public interface ICarrerasService {
     public List<Carreras> listar();
     public Optional<Carreras> listar(int id);
     public  void save(Carreras u);
-    public void delete(int id);
+    public boolean delete(int id);
 }

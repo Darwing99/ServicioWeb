@@ -7,10 +7,14 @@ import com.cloudcomputing.servicioweb.services.CarreraService;
 import com.cloudcomputing.servicioweb.settings.constant;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -18,8 +22,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class ControllerCarreras {
    
     @Autowired
-    CarreraService carreraService;
+    private CarreraService carreraService;
    
+    
     @GetMapping("/key="+constant.KEY+"/lista")
     public  ArrayList<Carreras> listar(){
 
@@ -31,4 +36,10 @@ public class ControllerCarreras {
         return this.carreraService.guardarCarreras(carreras);
 
     }
+    @DeleteMapping("/key="+constant.KEY+"/lista/{id}")  
+    public void DeleteMapping(@PathVariable int id){
+      carreraService.delete(id);
+    }
+    
+
 }

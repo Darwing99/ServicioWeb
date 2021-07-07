@@ -43,15 +43,21 @@ public class UsuarioService implements IUsuarioService {
 
 
     //actualizar si va con id
-    public Optional<Usuarios> obtenerPorid(int id){
-        return data.findById(id);
+    public Optional<Usuarios> findById(int id){
+        return data.findById((id));
 
     }
     //eliminar si asi se desea
     @Override
-    public void delete(int id) {
-        
-        
+    public boolean delete(int id){
+        try {
+             data.deleteById(id);
+             return true;
+            
+        } catch (Exception e) {
+           return false;
+        }
+
     }
     
     

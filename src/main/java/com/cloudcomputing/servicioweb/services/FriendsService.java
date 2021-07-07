@@ -44,9 +44,15 @@ public class FriendsService implements IFriendsService {
 
 
     @Override
-    public void delete(int id) {
-       
-        
+    public boolean delete(int id){
+        try {
+             friends.deleteById(id);
+             return true;
+            
+        } catch (Exception e) {
+           return false;
+        }
+
     }
     
 }

@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ICarreras extends CrudRepository<Carreras, Integer> {
-    
+    int deleteById(int id);
 }

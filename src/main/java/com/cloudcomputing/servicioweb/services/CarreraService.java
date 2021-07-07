@@ -27,18 +27,27 @@ public class CarreraService implements ICarrerasService  {
         return dataCarreras.findById(id);
     }
 
+
+    //actualiza y guarda
     @Override
     public void save(Carreras u) {
         dataCarreras.save(u);
     }
     public Carreras guardarCarreras(Carreras carreras){
+       
         return dataCarreras.save(carreras);
 
     }
     @Override
-    public void delete(int id) {
-        
-        
+    public boolean delete(int id){
+        try {
+             dataCarreras.deleteById(id);
+             return true;
+            
+        } catch (Exception e) {
+           return false;
+        }
+
     }
     
 }

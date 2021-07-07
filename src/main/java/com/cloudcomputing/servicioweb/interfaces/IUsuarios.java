@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface IUsuarios extends CrudRepository<Usuarios, Integer> {
-   
+    int deleteById(int id);
 
    
 }
