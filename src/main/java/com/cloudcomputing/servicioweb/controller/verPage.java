@@ -15,8 +15,7 @@ public class verPage {
     @GetMapping("/")
     public String listar( Model model) {
         model.addAttribute("usuario",new Usuarios());
-          return "index";
+        return "index";
     }
   
- 
 }

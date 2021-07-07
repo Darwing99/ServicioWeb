@@ -1,11 +1,11 @@
 package com.cloudcomputing.servicioweb.controller;
 
 
-
 import java.util.ArrayList;
 
-import com.cloudcomputing.servicioweb.model.Image;
-import com.cloudcomputing.servicioweb.services.ImageService;
+
+import com.cloudcomputing.servicioweb.model.Friends;
+import com.cloudcomputing.servicioweb.services.FriendsService;
 import com.cloudcomputing.servicioweb.settings.constant;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,21 +15,25 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@RequestMapping("image")
-public class ControllerImage {
-    @Autowired
-    ImageService imageService;
-    @GetMapping("/key="+constant.KEY+"/lista")
-    public  ArrayList<Image> listar(){
 
-        return imageService.listar();
+
+@RestController
+@RequestMapping("/friends")
+public class ControllerFriends {
+    @Autowired
+    FriendsService friendsService;
+
+    @GetMapping("/key="+constant.KEY+"/lista")
+    public  ArrayList<Friends> listar(){
+
+        return friendsService.listar();
     }
 
     @PostMapping("/key="+constant.KEY+"/insertlista")
-    public Image guardarUsuarios(@RequestBody Image image){
-        return this.imageService.GuardarImage(image);
+    public Friends guardarCarreras(@RequestBody Friends friends){
+        return this.friendsService.GuardarFriends(friends);
 
     }
+
 
 }

@@ -21,14 +21,10 @@ public class ControllerUsers {
     UsuarioService usuarioService;
     @GetMapping("/key="+constant.KEY+"/lista")
     public  ArrayList<Usuarios> listar(){
-
         return usuarioService.listar();
     }
-
     @PostMapping("/key="+constant.KEY+"/insertlista")
     public Usuarios guardarUsuarios(@RequestBody Usuarios users){
         return this.usuarioService.guardaUsuarios(users);
-
     }
-
 }

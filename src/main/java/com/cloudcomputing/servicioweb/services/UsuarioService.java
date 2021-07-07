@@ -15,22 +15,19 @@ public class UsuarioService implements IUsuarioService {
 
     @Autowired
     private IUsuarios data;
-    
 
-   
     // listar con GET
     @Override
         public ArrayList<Usuarios>listar() {
           
             return (ArrayList<Usuarios>)data.findAll();
         }
-
     @Override
     public Optional<Usuarios> listar(int id) {
       
-        return null;
+        return data.findById(id);
     }
-
+    
     @Override
     public void save(Usuarios u) {
           data.save(u);
@@ -51,15 +48,10 @@ public class UsuarioService implements IUsuarioService {
 
     }
     //eliminar si asi se desea
-    public boolean delete(int id){
-        try {
-             data.deleteById(id);
-             return true;
-            
-        } catch (Exception e) {
-           return false;
-        }
-
+    @Override
+    public void delete(int id) {
+        
+        
     }
     
     
