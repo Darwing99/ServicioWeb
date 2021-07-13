@@ -41,7 +41,13 @@ public class ImageService implements IImagesService {
     @Override
     public boolean delete(int id) {
         
-        return false;
+        try {
+            image.deleteById(id);
+            return true;
+           
+       } catch (Exception e) {
+          return false;
+       }
     }
     
 }
