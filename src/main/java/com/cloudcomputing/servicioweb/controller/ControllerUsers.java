@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
-
+ 
 @RestController
 @RequestMapping("/user")
 public class ControllerUsers {
@@ -36,7 +36,6 @@ public class ControllerUsers {
     public Optional<Usuarios> UpdateUsuarios(@RequestBody Usuarios usuarios,int id) {
      
         return usuarioService.findById(id).map(data->{
-          usuarios.setId(data.getId());
           usuarios.setName(data.getName());
           usuarios.setCorreo(data.getCorreo());
           usuarios.setDireccion(data.getDireccion());
