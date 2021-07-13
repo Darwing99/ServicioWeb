@@ -34,7 +34,7 @@ public class ImageService implements IImagesService {
    
 
 
-    public Image GuardarFriends(Image u){
+    public Image GuardarImage(Image u){
         return image.save(u);
 
     }

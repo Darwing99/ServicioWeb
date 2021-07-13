@@ -28,8 +28,8 @@ public class ControllerImage {
     }
 
     @PostMapping("/key="+constant.KEY+"/insertlista")
-    public Image guardarCarreras(@RequestBody Image img){
-        return this.imageService.GuardarFriends(img);
+    public Image guardarImage(@RequestBody Image img){
+        return this.imageService.GuardarImage(img);
 
     }
 
