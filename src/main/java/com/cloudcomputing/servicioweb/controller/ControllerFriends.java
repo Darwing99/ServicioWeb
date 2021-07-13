@@ -37,7 +37,6 @@ public class ControllerFriends {
 
     }
 
-
     @DeleteMapping(value="/key="+constant.KEY+"/lista/{id}")
     public void DeleteMapping(@PathVariable int id){
         friendsService.delete(id);
