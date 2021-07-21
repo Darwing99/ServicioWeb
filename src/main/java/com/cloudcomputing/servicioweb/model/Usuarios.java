@@ -20,6 +20,8 @@ public class Usuarios {
     private int id;
     @Column(name="name",length = 255)
     private String name;
+    @Column(name="idToken",length = 255)
+    private String idToken;
     @Column(name="correo",length = 255)
     private String correo;
     @Column(name="fecha",length = 255)
@@ -30,8 +32,9 @@ public class Usuarios {
     private boolean estado;
 
   
-    public Usuarios(int id, String name,String correo,Date fecha,byte[] image,String direccion, String password,boolean estado) {
+    public Usuarios(int id,String idToken, String name,String correo,Date fecha,byte[] image,String direccion, String password,boolean estado) {
         this.id = id;
+        this.idToken=idToken;
         this.name = name;
         this.correo = correo;
         this.fecha=fecha;
@@ -94,6 +97,13 @@ public class Usuarios {
     }
     public void setEstado(boolean estado) {
         this.estado = estado;
+    }
+    
+    public String getIdToken() {
+        return idToken;
+    }
+    public void setIdToken(String idToken) {
+        this.idToken = idToken;
     }
 
     
