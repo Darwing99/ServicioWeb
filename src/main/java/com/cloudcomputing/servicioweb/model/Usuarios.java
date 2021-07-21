@@ -119,11 +119,5 @@ public class Usuarios {
     }
 
     
-    public String getTokenFirebase() {
-        return tokenfirebase;
-    }
-    public void setTokenFirebase(String tokenfirebase) {
-        this.tokenfirebase = tokenfirebase;
-    }
     
 }
