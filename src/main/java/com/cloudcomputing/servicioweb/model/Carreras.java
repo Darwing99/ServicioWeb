@@ -26,13 +26,13 @@ private Date fecha;
 @Column(name="distancia",length = 100)
 private double distancia;
 @Column(name = "fotos",length = 10)
-private int fotos;
+private byte[] fotos;
 @Column(name="tiempo",length = 1)
 private double tiempo;
 @Column(name="estado",length = 1,scale = 1)
 private boolean estado;
     
-public Carreras(int idToken, String carrera, int idUser, Date fecha, double distancia, int fotos,
+public Carreras(int idToken, String carrera, int idUser, Date fecha, double distancia, byte[] fotos,
         double tiempo, boolean estado) {
     this.idToken = idToken;
     this.carrera = carrera;
@@ -77,12 +77,7 @@ public double getDistancia() {
 public void setDistancia(double distancia) {
     this.distancia = distancia;
 }
-public int getFotos() {
-    return fotos;
-}
-public void setFotos(int fotos) {
-    this.fotos = fotos;
-}
+
 public double getTiempo() {
     return tiempo;
 }
@@ -94,6 +89,14 @@ public boolean isEstado() {
 }
 public void setEstado(boolean estado) {
     this.estado = estado;
+}
+
+public byte[] getFotos() {
+    return fotos;
+}
+
+public void setFotos(byte[] fotos) {
+    this.fotos = fotos;
 }
 
 }
