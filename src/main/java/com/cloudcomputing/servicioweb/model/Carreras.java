@@ -10,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 
 @Entity
 @Table(name="CarreraList")
@@ -19,13 +21,13 @@ public class Carreras {
 private int idToken;
 @Column(name="carrera",length = 200)
 private String carrera;
-@Column(name="IdUser",length = 10)
+@Column(name="IdUser",length = 100)
 private int IdUser;
-@Column(name="fecha",length = 100)
+@Column(name="fecha",length = 200)
 private Date fecha;
 @Column(name="distancia",length = 100)
 private double distancia;
-@Column(name = "fotos",length = 10)
+@Column(name = "fotos")
 private byte[] fotos;
 @Column(name="tiempo",length = 1)
 private double tiempo;
