@@ -26,20 +26,27 @@ public class Usuarios {
     private String firebasetoken;
     @Column(name="correo",length = 255)
     private String correo;
+    @Column(name="pais",length = 255)
+    private String pais;
     @Column(name="fecha",length = 255)
-    private Date  fecha;
+    private Date fecha;
+    @Column(name="image",length = 255)
     private byte[] image;
+    @Column(name="direccion",length = 255)
     private String direccion;
+    @Column(name="password",length = 255)
     private String password;
+    @Column(name="estado",length = 255)
     private boolean estado;
 
   
-    public Usuarios(int id,String idToken, String firebasetoken, String name,String correo,Date fecha,byte[] image,String direccion, String password,boolean estado) {
+    public Usuarios(int id,String idToken, String firebasetoken, String name,String correo,String pais, Date fecha,byte[] image,String direccion, String password,boolean estado) {
         this.id = id;
         this.idToken=idToken;
         this.firebasetoken=firebasetoken;
         this.name = name;
         this.correo = correo;
+        this.pais=pais;
         this.fecha=fecha;
         this.image=image;
         this.direccion=direccion;
@@ -120,6 +127,5 @@ public class Usuarios {
         this.firebasetoken = firebasetoken;
     }
 
-    
-    
+
 }
