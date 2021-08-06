@@ -22,8 +22,6 @@ public class Usuarios {
     private String name;
     @Column(name="idToken",length = 255)
     private String idToken;
-    @Column(name="firebasetoken",length = 255)
-    private String firebasetoken;
     @Column(name="correo",length = 255)
     private String correo;
     @Column(name="pais",length = 255)
@@ -36,14 +34,21 @@ public class Usuarios {
     private String direccion;
     @Column(name="password",length = 255)
     private String password;
+    public String getPais() {
+        return pais;
+    }
+
+    public void setPais(String pais) {
+        this.pais = pais;
+    }
     @Column(name="estado",length = 255)
     private boolean estado;
 
   
-    public Usuarios(int id,String idToken, String firebasetoken, String name,String correo,String pais, Date fecha,byte[] image,String direccion, String password,boolean estado) {
+    public Usuarios(int id,String idToken,  String name,String correo,String pais, Date fecha,byte[] image,String direccion, String password,boolean estado) {
         this.id = id;
         this.idToken=idToken;
-        this.firebasetoken=firebasetoken;
+
         this.name = name;
         this.correo = correo;
         this.pais=pais;
@@ -119,13 +124,7 @@ public class Usuarios {
         this.idToken = idToken;
     }
 
-    public String getFirebasetoken() {
-        return firebasetoken;
-    }
-
-    public void setFirebasetoken(String firebasetoken) {
-        this.firebasetoken = firebasetoken;
-    }
+   
 
 
 }
