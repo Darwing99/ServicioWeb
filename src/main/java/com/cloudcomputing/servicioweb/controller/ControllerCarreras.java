@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ControllerCarreras {
    
     @Autowired
-    private CarreraService carreraService;
+    CarreraService carreraService;
    
     
     @GetMapping("/key="+constant.KEY+"/lista")
@@ -34,8 +34,8 @@ public class ControllerCarreras {
     }
 
     @PostMapping("/key="+constant.KEY+"/insertlista")
-    public Carreras guardarCarreras(@RequestBody Carreras carreras){
-        return this.carreraService.guardarCarreras(carreras);
+    public Carreras guardarCarreras(@RequestBody Carreras postcarreras){
+        return this.carreraService.guardarCarreras(postcarreras);
 
     }
     @DeleteMapping("/key="+constant.KEY+"/lista/{id}")  
