@@ -10,7 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
+
 
 
 @Entity
@@ -23,7 +23,7 @@ private int idToken;
 private String carrera;
 @Column(name="IdUser",length = 100)
 private int IdUser;
-@Column(name="fecha",length = 200)
+@Column(name="fecha")
 private Date fecha;
 @Column(name="distancia",length = 100)
 private double distancia;
@@ -36,14 +36,14 @@ private boolean estado;
     
 public Carreras(int idToken, String carrera, int idUser, Date fecha, double distancia, byte[] fotos,
         double tiempo, boolean estado) {
-    this.idToken = idToken;
-    this.carrera = carrera;
-    this.IdUser = idUser;
-    this.fecha = fecha;
-    this.distancia = distancia;
-    this.fotos = fotos;
-    this.tiempo = tiempo;
-    this.estado = estado;
+        this.idToken = idToken;
+        this.carrera = carrera;
+        this.IdUser = idUser;
+        this.fecha = fecha;
+        this.distancia = distancia;
+        this.fotos = fotos;
+        this.tiempo = tiempo;
+        this.estado = estado;
 }
 
 public Carreras() {
