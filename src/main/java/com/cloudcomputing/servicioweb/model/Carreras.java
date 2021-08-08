@@ -32,20 +32,54 @@ private double distancia;
 private byte[] fotos;
 @Column(name="tiempo")
 private double tiempo;
+@Column(name="tiempohoras")
+private double tiempohoras;
+@Column(name="velocidad")
+private double velocidad;
+@Column(name="calorias")
+private double calorias;
+public double getTiempohoras() {
+    return tiempohoras;
+}
+
+public void setTiempohoras(double tiempohoras) {
+    this.tiempohoras = tiempohoras;
+}
+
+public double getVelocidad() {
+    return velocidad;
+}
+
+public void setVelocidad(double velocidad) {
+    this.velocidad = velocidad;
+}
+
+public double getCalorias() {
+    return calorias;
+}
+
+public void setCalorias(double calorias) {
+    this.calorias = calorias;
+}
+
 @Column(name="estado")
 private boolean estado;
     
-public Carreras(int idToken, String carrera, int idUser, Date fecha, double distancia, byte[] fotos,
-        double tiempo, boolean estado) {
-        this.idToken = idToken;
-        this.carrera = carrera;
-        this.IdUser = idUser;
-        this.fecha = fecha;
-        this.distancia = distancia;
-        this.fotos = fotos;
-        this.tiempo = tiempo;
-        this.estado = estado;
+public Carreras(int idToken, String carrera, int idUser, Date fecha, double distancia, byte[] fotos, double tiempo,
+        double tiempohoras, double velocidad, double calorias, boolean estado) {
+    this.idToken = idToken;
+    this.carrera = carrera;
+    IdUser = idUser;
+    this.fecha = fecha;
+    this.distancia = distancia;
+    this.fotos = fotos;
+    this.tiempo = tiempo;
+    this.tiempohoras = tiempohoras;
+    this.velocidad = velocidad;
+    this.calorias = calorias;
+    this.estado = estado;
 }
+
 
 public Carreras() {
 }
