@@ -16,6 +16,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="CarreraList")
 public class Carreras {
+@Column(name="idToken")
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 private int idToken;
