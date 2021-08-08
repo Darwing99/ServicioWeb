@@ -21,17 +21,17 @@ public class Carreras {
 private int idToken;
 @Column(name="carrera",length = 200)
 private String carrera;
-@Column(name="IdUser",length = 100)
+@Column(name="IdUser")
 private int IdUser;
 @Column(name="fecha")
 private Date fecha;
-@Column(name="distancia",length = 100)
+@Column(name="distancia")
 private double distancia;
 @Column(name = "fotos")
 private byte[] fotos;
-@Column(name="tiempo",length = 1)
+@Column(name="tiempo")
 private double tiempo;
-@Column(name="estado",length = 1,scale = 1)
+@Column(name="estado")
 private boolean estado;
     
 public Carreras(int idToken, String carrera, int idUser, Date fecha, double distancia, byte[] fotos,
